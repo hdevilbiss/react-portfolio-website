@@ -1,9 +1,15 @@
+/**
+ * Pages
+ */
+import AboutUs from './pages/AboutUs';
+
 function App() {
   return (
     <div className="App">
       <h1>
-        ACME Company
+        ACME Ice Hockey Training Center
       </h1>
+      <AboutUs />
     </div>
   );
 }
