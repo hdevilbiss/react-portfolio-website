@@ -1,6 +1,6 @@
 import { faCar, faCertificate, faSpa, faSmileBeam } from '@fortawesome/free-solid-svg-icons';
 import home2 from '../images/gong.jpg'
-import ServiceCard from './ServiceCard';
+import ServiceCard from './partials/ServiceCard';
 const ServicesSection = () => {
   return (
     <div className="services">
