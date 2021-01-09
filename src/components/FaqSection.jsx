@@ -11,7 +11,7 @@ const FaqSection = () => {
       />
       <QuestionAnswer
         question="Why should I hire one of your coaches?"
-        answer="Having a coach can provide a more personalized experience to your meditation or yoga practice, able to provide relevant queues and advice to fit your needs."
+        answer="Having a coach can provide a more personalized experience to your meditation or yoga practice, able to provide relevant cues and advice to fit your needs."
       />
       <QuestionAnswer
         question="What is the benefit of meditation or yoga?"
