@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCar, faCertificate, faSpa, faSmileBeam } from '@fortawesome/free-solid-svg-icons';
 import home2 from '../images/gong.jpg'
+import ServiceCard from './ServiceCard';
 const ServicesSection = () => {
   return (
     <div className="services">
@@ -12,50 +12,26 @@ const ServicesSection = () => {
           You need only bring yourself.
         </p>
         <div className="cards">
-          <div className="card">
-            <div className="icon">
-              <FontAwesomeIcon icon={faCar} />
-              <h3>
-                Mobile
-              </h3>
-              <p>
-                No need to leave your home or office - we will commute to your location.
-              </p>
-            </div>
-          </div>
-          <div className="card">
-            <div className="icon">
-              <FontAwesomeIcon icon={faCertificate} />
-              <h3>
-                Certified
-              </h3>
-              <p>
-                Well-educated coaches with certifications in meditation, yoga and wellness.
-              </p>
-            </div>
-          </div>
-          <div className="card">
-            <div className="icon">
-              <FontAwesomeIcon icon={faSpa} />
-              <h3>
-                Relaxation
-              </h3>
-              <p>
-                We bring all the equipment needed, from incense to yoga mats, towels and candles, or hot stones and music.
-              </p>
-            </div>
-          </div>
-          <div className="card">
-            <div className="icon">
-              <FontAwesomeIcon icon={faSmileBeam} />
-              <h3>
-                Friendly, Five-Star Service
-              </h3>
-              <p>
-                Our testimonials frequently mention the warm, friendly attitudes of our coaches.
-              </p>
-            </div>
-          </div>
+          <ServiceCard
+            icon={faCar}
+            heading="Mobile"
+            message="We will commute to your location."
+          />
+          <ServiceCard
+            icon={faCertificate}
+            heading="Certified"
+            message="Well-educated coaches certified in meditation, yoga and wellness."
+          />
+          <ServiceCard
+            icon={faSpa}
+            heading="Relaxation"
+            message="We bring all the equipment needed, from incense to yoga mats, towels and candles, or hot stones and music."
+          />
+          <ServiceCard
+            icon={faSmileBeam}
+            heading="Friendly, Five-Star Service"
+            message="Our testimonials frequently mention the warm, friendly attitudes of our coaches."
+          />
         </div>
       </div>
       <figure>
