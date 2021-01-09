@@ -1,15 +1,15 @@
 /**
  * Pages
  */
-import AboutUs from './pages/AboutUs';
+import Home from './pages/Home';
 
 function App() {
   return (
     <div className="App">
       <h1>
-        ACME Ice Hockey Training Center
+        ACME Mobile Meditation Institute
       </h1>
-      <AboutUs />
+      <Home />
     </div>
   );
 }
