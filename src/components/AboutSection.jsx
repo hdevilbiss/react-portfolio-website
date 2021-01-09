@@ -1,4 +1,4 @@
-import home1 from '../images/home-faceoff-klim-musalimov-unsplash.jpg';
+import home1 from '../images/incense.jpg';
 const AboutSection = () => {
   return (
     <div>
@@ -6,31 +6,33 @@ const AboutSection = () => {
         <div className="title">
           <div className="hide">
             <h2>
-              Our high-performance training center
+              Our certified meditation coaches
             </h2>
           </div>
           <div className="hide">
             <h2>
-              enables athletes to
+              will bring the <span>calm</span>
             </h2>
           </div>
           <div className="hide">
           <h2>
-              achieve their <span>dreams</span>
-            </h2>
+            to your workplace or event
+          </h2>
           </div>
         </div>
         <p>
-          From agility to strength, from strategy to stick-handling, our world-class trainers can help you address your strengths and weaknessess to become the best version of yourself both on and off the ice.
+          Book a meditation event online. Choose a coach from our directory, or get paired based on your needs.
         </p>
         <button>
-          Contact Us
+          Book Now
         </button>
       </div>
-      <div className="image">
-        <img src={home1} alt="An ice hockey faceoff just before the puck drop in the left defensive zone" />
-        <span>Photo by <a href="https://unsplash.com/@klim11?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Klim Musalimov</a> on <a href="https://unsplash.com/s/photos/rink?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-      </div>
+      <figure>
+        <img src={home1} alt="A person cooling some incense" />
+        <figcaption>
+          <span>Photo by <a href="https://unsplash.com/@conscious_design?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Conscious Design</a> on <a href="https://unsplash.com/s/photos/meditation?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+        </figcaption>
+      </figure>
     </div>
   )
 }
