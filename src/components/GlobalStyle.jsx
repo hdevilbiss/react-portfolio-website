@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
 body {
   background:#faf9f9;
   color: #333745;
+  font-family: sans-serif;
 }
 button {
   border: none;
@@ -27,8 +28,15 @@ h2 {
   font-size: 4rem;
   font-weight: lighter;
 }
-p {
+h3 {
+  font-size: 2rem;
+}
+h4 {
   font-size: 1.4rem;
+}
+p {
+  font-size: 1.2rem;
+  line-height: 150%;
   padding: 1rem 0rem;
 }
 `;
