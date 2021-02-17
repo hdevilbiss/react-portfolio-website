@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
 body {
   background:#faf9f9;
   color: #333745;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 button {
   border: none;
@@ -17,12 +17,16 @@ button {
   cursor: pointer;
   font-size: 1.1rem;
   font-weight: bold;
+  margin: 1rem;
   padding: 1rem 1rem;
   transition: all 0.5s ease;
   &:hover {
     background-color:#00b4d8;
     border-radius: 10px;
   }
+}
+h1 {
+  font-family: 'Architects Daughter', cursive;
 }
 h2 {
   font-size: 4rem;
