@@ -1,6 +1,8 @@
-# react-portfolio-website
+# ACME Meditation
 
-An animated React portfolio website with three pages: home, about, and contact.
+An animated React portfolio website with three pages: home, about, and contact. Uses styled components instead of Sass.
+
+![A screenshot of the about section reading ACME Mobile Meditation Institute we bring the calm to you](docs/images/about-section-screenshot.jpg)
 
 ## Get Started
 
