@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <h1>
-        ACME Mobile Meditation Institute
+        ACME Mobile Meditation Co
       </h1>
       <Home />
     </div>
