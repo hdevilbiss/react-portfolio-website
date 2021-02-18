@@ -46,18 +46,12 @@ const AboutSection = () => {
  */
 const StyledAbout = styled.div`
   align-items: center;
-  background-color: #111;
-  color: #eee;
   display: flex;
   overflow: hidden;
   gap: 1rem;
   justify-content: space-between;
   min-height: 90vh;
   padding: 0rem 2rem;
-  .calm {
-    color: #00afb9;
-    font-weight: bold;
-  }
   .title {
     letter-spacing: 0.25rem;
     margin-left: auto;
@@ -65,15 +59,10 @@ const StyledAbout = styled.div`
     text-align: center;
     width: fit-content;
   }
-  .photo-credit {
-    font-style: italic;
-    a {
-      color:#00afb9;
-      transition: all 0.5s ease;
-      &:hover {
-        color: #fff;
-      }
-    }
+  @media only screen and (max-width: 640px) {
+    align-items: flex-start;
+    background-image: url("../images/incense.jpg");
+    padding-top: 2rem;
   }
 `;
 
@@ -93,6 +82,14 @@ const StyledDescription = styled.div`
     padding-left: 2rem;
     padding-right: 2rem;
   }
+  /**
+  * Mobile
+  */
+  @media only screen and (max-width: 640px) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0;
+  }
 `;
 
 const StyledImage = styled.div`
@@ -102,6 +99,12 @@ const StyledImage = styled.div`
     height: 80vh;
     object-fit: cover;
     width: 100%;
+  }
+  /**
+   * Mobile
+   */
+  @media only screen and (max-width: 640px) {
+    display: none;
   }
 `;
 
