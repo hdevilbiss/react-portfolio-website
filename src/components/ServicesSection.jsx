@@ -39,24 +39,42 @@ const ServicesSection = () => {
           />
         </Cards>
       </div>
-      <figure>
-        <img src={home2} alt="A person cooling some incense" />
-        <figcaption>
-        <span>Photo by <a href="https://unsplash.com/@madhatterzone?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Manja Vitolic</a> on <a href="https://unsplash.com/s/photos/gong?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-        </figcaption>
-      </figure>
+      <div className="flex-image">
+        <figure>
+          <img src={home2} alt="A person behind a gong using a foam roller and yoga mat" />
+          <figcaption>
+          <span>Photo by <a href="https://unsplash.com/@madhatterzone?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Manja Vitolic</a> on <a href="https://unsplash.com/s/photos/gong?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+          </figcaption>
+        </figure>
+      </div>
     </Services>
   );
 }
 
 const Services = styled.div`
-  h3 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-top: 2rem;
+  .flex-image {
+    flex: 1;
+    overflow: hidden;
+    img {
+      height: 80vh;
+      object-fit: cover;
+      width: 100%;
+    }
   }
-  p {
-    padding: 2rem 0rem 4rem 0rem;
-    width: 70%;
+  @media only screen and (max-width: 640px) {
+    padding-top: 1rem;
+    .flex-image {
+      display: none;
+    }
   }
 `;
 
