@@ -1,10 +1,18 @@
 import QuestionAnswer from './partials/QuestionAnswer';
+import styled from "styled-components";
+
 const FaqSection = () => {
   return (
-    <div className="faq">
-      <h3>
-        Any questions?
-      </h3>
+    <StyledFaq>
+      <section>
+      <header>
+        <h3>
+          Any questions?
+        </h3>
+        <h4 className="calm">
+          FAQ
+        </h4>
+      </header>
       <QuestionAnswer
         question="What's the first step?"
         answer="Fill out a form to assess your needs, then optionally make an account to book your first event."
@@ -33,8 +41,43 @@ const FaqSection = () => {
         question="How do I cancel an event?"
         answer="You can cancel an event up to 24 hours in advance without penalty by logging into your account, selecting 'My Events', and selecting 'Cancel this event'. Events cancelled within 24 hours of the event will only receive a partial refund. And don't worry - our coaches are guaranteed to be paid even if you must cancel last-minute."
       />
-    </div>
+      </section>
+    </StyledFaq>
   );
 }
+
+const StyledFaq = styled.div`
+  h3, h4 {
+    font-size: 2rem;
+  }
+  header {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .faq-line {
+    background: #ccc;
+    height: 0.2rem;
+    margin: 2rem 0rem;
+    width: 100%;
+  }
+  .question {
+    cursor: pointer;
+    padding: 3rem;
+  }
+  .answer {
+    padding: 1rem;
+  }
+  @media only screen and (max-width: 640px) {
+      .faq-line {
+        height: 0.1rem;
+      }
+      .question {
+        padding: 1rem;
+      }
+      .answer {
+        padding: 0rem;
+      }
+  }
+`;
 
 export default FaqSection;
