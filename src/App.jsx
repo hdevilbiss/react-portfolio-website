@@ -2,6 +2,7 @@
  * Pages
  */
 import Home from './pages/Home';
+import Nav from "./components/Nav";
 /**
  * Styles
  */
@@ -11,9 +12,7 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <h1>
-        ACME Mobile Meditation Co
-      </h1>
+      <Nav />
       <Home />
     </div>
   );
