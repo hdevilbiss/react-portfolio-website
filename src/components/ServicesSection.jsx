@@ -2,7 +2,7 @@ import { faCar, faCertificate, faSpa, faSmileBeam } from '@fortawesome/free-soli
 import ServiceCard from './partials/ServiceCard';
 import home2 from '../images/gong.jpg'
 import styled from "styled-components";
-import { StyledImage } from "../styles";
+import { Section, StyledImage } from "../styles";
 
 /**
  * Return object
@@ -56,11 +56,9 @@ const ServicesSection = () => {
   );
 }
 
-const Services = styled.div`
+const Services = styled(Section)`
   margin-left: auto;
   margin-right: auto;
-  min-height: 90vh;
-  padding: 1rem 2rem;
   .grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const Section = styled.div`
+  min-height: 90vh;
+  padding: 1rem 2rem;
+`;
+
 export const StyledImage = styled.div`
   flex: 1;
   overflow: hidden;

@@ -1,6 +1,6 @@
 import home1 from '../images/incense.jpg';
 import styled from 'styled-components';
-import { StyledImage, Hide} from '../styles';
+import { Section, StyledImage, Hide} from '../styles';
 
 const AboutSection = () => {
   return (
@@ -45,13 +45,12 @@ const AboutSection = () => {
 /**
  * Styled Components
  */
-const StyledAbout = styled.div`
+const StyledAbout = styled(Section)`
   align-items: center;
   display: flex;
   overflow: hidden;
   gap: 1rem;
   justify-content: space-between;
-  min-height: 90vh;
   padding: 2rem 2rem;
   .title {
     letter-spacing: 0.25rem;

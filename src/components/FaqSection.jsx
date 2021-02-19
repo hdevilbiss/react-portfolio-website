@@ -1,5 +1,6 @@
 import QuestionAnswer from './partials/QuestionAnswer';
 import styled from "styled-components";
+import { Section } from "../styles";
 
 const FaqSection = () => {
   return (
@@ -46,9 +47,7 @@ const FaqSection = () => {
   );
 }
 
-const StyledFaq = styled.div`
-  min-height: 90vh;
-  padding: 1rem 2rem;
+const StyledFaq = styled(Section)`
   header {
     margin-left: auto;
     margin-right: auto;
