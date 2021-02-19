@@ -74,9 +74,12 @@ img {
       margin-right: auto;
     }
     h2 {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
-    h3, h4, h5, h6, p {
+    h3, h4 {
+      font-size: 1.5rem;
+    }
+    h5, h6, p {
       font-size: 1rem;
     }
   }

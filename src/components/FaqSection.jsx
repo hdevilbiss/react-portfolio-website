@@ -47,9 +47,8 @@ const FaqSection = () => {
 }
 
 const StyledFaq = styled.div`
-  h3, h4 {
-    font-size: 2rem;
-  }
+  min-height: 90vh;
+  padding: 1rem 2rem;
   header {
     margin-left: auto;
     margin-right: auto;
@@ -62,20 +61,21 @@ const StyledFaq = styled.div`
   }
   .question {
     cursor: pointer;
-    padding: 3rem;
+    padding-left: 3rem;
   }
   .answer {
-    padding: 1rem;
+    padding-left: 4rem;
   }
   @media only screen and (max-width: 640px) {
       .faq-line {
         height: 0.1rem;
+        margin: 1rem 0rem;
       }
       .question {
         padding: 1rem;
       }
       .answer {
-        padding: 0rem;
+        padding: 1.5rem;
       }
   }
 `;
