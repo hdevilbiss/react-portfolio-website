@@ -11,7 +11,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 a {
-  color:#00afb9;
+  color:#00b4d8;
   transition: all 0.5s ease;
   &:hover {
     color: #fff;
@@ -59,7 +59,7 @@ img {
   border-radius: 5px;
 }
 .calm {
-  color: #00afb9;
+  color: #00b4d8;
   font-weight: bold;
 }
 .photo-credit {
