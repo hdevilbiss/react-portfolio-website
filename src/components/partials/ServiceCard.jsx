@@ -4,12 +4,12 @@ import styled from "styled-components";
 /**
  * Return object
  */
-const ServiceCard = ({icon, iconColor, heading, message}) => {
+const ServiceCard = ({icon, iconcolor, heading, message}) => {
   return (
     <Card>
       <section>
         <header>
-          <div className="icon" iconColor={iconColor}>
+          <div className="icon" iconcolor={iconcolor}>
             <FontAwesomeIcon icon={icon} size="2x" />
           </div>
           <h4>
@@ -37,7 +37,7 @@ const Card = styled.div`
   }
   .icon {
     svg {
-      color: ${props => props.iconColor ? props.iconColor : "inherit"};
+      color: ${props => props.iconcolor ? props.iconcolor : "inherit"};
     }
   }
 `;

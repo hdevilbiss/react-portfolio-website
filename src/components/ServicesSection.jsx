@@ -22,13 +22,13 @@ const ServicesSection = () => {
         <Cards>
           <ServiceCard
             icon={faCar}
-            iconColor="#F00"
+            iconcolor="#F00"
             heading="Mobile"
             message="We will commute to your location."
           />
           <ServiceCard
             icon={faCertificate}
-            iconColor="#FF0"
+            iconcolor="#FF0"
             heading="Certified"
             message="Well-educated coaches certified in meditation, yoga and wellness."
           />
