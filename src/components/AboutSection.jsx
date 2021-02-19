@@ -1,5 +1,6 @@
 import home1 from '../images/incense.jpg';
 import styled from 'styled-components';
+import { StyledImage, Hide} from '../styles';
 
 const AboutSection = () => {
   return (
@@ -51,7 +52,7 @@ const StyledAbout = styled.div`
   gap: 1rem;
   justify-content: space-between;
   min-height: 90vh;
-  padding: 0rem 2rem;
+  padding: 2rem 2rem;
   .title {
     letter-spacing: 0.25rem;
     margin-left: auto;
@@ -60,9 +61,11 @@ const StyledAbout = styled.div`
     width: fit-content;
   }
   @media only screen and (max-width: 640px) {
-    align-items: flex-start;
     background-image: url("../images/incense.jpg");
     padding-top: 2rem;
+  }
+  @media only screen and (max-width: 320) {
+    align-items: flex-start;
   }
 `;
 
@@ -92,24 +95,6 @@ const StyledDescription = styled.div`
   }
 `;
 
-const StyledImage = styled.div`
-  flex: 1;
-  overflow: hidden;
-  img {
-    height: 80vh;
-    object-fit: cover;
-    width: 100%;
-  }
-  /**
-   * Mobile
-   */
-  @media only screen and (max-width: 640px) {
-    display: none;
-  }
-`;
 
-const Hide = styled.div`
-  overflow: hidden;
-`;
 
 export default AboutSection;
