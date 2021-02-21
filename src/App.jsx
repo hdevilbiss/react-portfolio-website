@@ -1,3 +1,5 @@
+import {Switch, Route} from "react-router-dom";
+
 /**
  * Pages
  */
@@ -15,9 +17,17 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <Home />
-      <OurWork />
-      <ContactUs />
+      <Switch>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/work">
+          <OurWork />
+        </Route>
+        <Route path="/contact">
+          <ContactUs />
+        </Route>
+      </Switch>
     </div>
   );
 }
