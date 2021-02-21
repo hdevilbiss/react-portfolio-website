@@ -12,3 +12,7 @@ An animated React portfolio website with three pages: home, about, and contact. 
 1. Start the server; a browser will pop up after some time. `npm start`
 
 **This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).**
+
+## Routing
+
+The `react-router-dom` package enables page routing.
