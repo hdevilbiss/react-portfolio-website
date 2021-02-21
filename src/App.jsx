@@ -3,6 +3,8 @@
  */
 import Home from './pages/Home';
 import Nav from "./components/Nav";
+import OurWork from "./pages/OurWork";
+import ContactUs from "./pages/ContactUs";
 /**
  * Styles
  */
@@ -14,6 +16,8 @@ function App() {
       <GlobalStyle />
       <Nav />
       <Home />
+      <OurWork />
+      <ContactUs />
     </div>
   );
 }
