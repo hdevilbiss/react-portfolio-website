@@ -67,6 +67,19 @@ const StyledNav = styled.nav`
       }
     }
   }
+  @media only screen and (max-width: 499px) {
+    ul {
+      display: block;
+      margin: 0rem 1rem;
+      text-align: center;
+      width: 100%;
+      li {
+        a {
+          width: 100%;
+        }
+      }
+    }
+  }
 `;
 
 export default Nav;
