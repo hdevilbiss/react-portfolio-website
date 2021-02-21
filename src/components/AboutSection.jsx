@@ -52,6 +52,9 @@ const StyledAbout = styled(Section)`
   gap: 1rem;
   justify-content: space-between;
   padding: 2rem 2rem;
+  h2 {
+    font-size: 3rem;
+  }
   .title {
     letter-spacing: 0.25rem;
     margin-left: auto;
