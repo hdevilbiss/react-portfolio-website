@@ -1,18 +1,19 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const links = [
     {
-      name: "About Us",
-      route: "#"
+      name: "Home",
+      route: "/"
     },
     {
       name: "Our Work",
-      route: "#"
+      route: "/work"
     },
     {
       name: "Contact Us",
-      route: "#"
+      route: "/contact"
     }
   ]
 
@@ -25,9 +26,9 @@ const Nav = () => {
         {links.map(({name, route}, idx) => {
           return (
             <li key={idx}>
-              <a href={route}>
+              <Link to={route}>
                 {name}
-              </a>
+              </Link>
             </li>
           )
         })}
