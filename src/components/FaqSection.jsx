@@ -52,12 +52,6 @@ const StyledFaq = styled(Section)`
     margin-left: auto;
     margin-right: auto;
   }
-  .faq-line {
-    background: #ccc;
-    height: 0.2rem;
-    margin: 2rem 0rem;
-    width: 100%;
-  }
   .question {
     cursor: pointer;
     padding-left: 3rem;
@@ -66,10 +60,6 @@ const StyledFaq = styled(Section)`
     padding-left: 4rem;
   }
   @media only screen and (max-width: 640px) {
-      .faq-line {
-        height: 0.1rem;
-        margin: 1rem 0rem;
-      }
       .question {
         padding: 1rem;
       }

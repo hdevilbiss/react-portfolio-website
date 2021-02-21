@@ -62,6 +62,16 @@ img {
   color: #00b4d8;
   font-weight: bold;
 }
+.line {
+  background: #ccc;
+  height: 0.2rem;
+  margin: 2rem 0rem;
+  width: 100%;
+  @media only screen and (max-width: 640px) {
+    height: 0.1rem;
+    margin: 1rem 0rem;
+  }
+}
 .photo-credit {
     font-style: italic;
 }

@@ -11,7 +11,7 @@ const QuestionAnswer = ({question, answer}) => {
           {answer}
         </p>
       </div>
-      <div className="faq-line"></div>
+      <div className="line"></div>
     </div>
   );
 }
