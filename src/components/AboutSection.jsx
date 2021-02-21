@@ -24,7 +24,7 @@ const AboutSection = () => {
           </Hide>
         </div>
         <p>
-          Book a meditation event online today.
+          Book a wellness event online today.
         </p>
         <button>
           Book Now
