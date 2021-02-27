@@ -2,13 +2,16 @@ import incense2 from "../images/incense2.jpg";
 import groupYoga from "../images/group-yoga.jpg";
 import massageBack from "../images/massage-back.jpg";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import {Section} from "../styles";
 import WorkCard from "../components/partials/WorkCard";
+/**
+ * Animations
+ */
+import { pageAnimation } from "../animation";
 
 const OurWork = () => {
   return (
-    <Work>
+    <Work variants={pageAnimation} initial="hidden" animate="show" exit="exit">
       <h2>
         Our Work
       </h2>

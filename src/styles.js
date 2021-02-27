@@ -1,8 +1,12 @@
 import styled from 'styled-components';
+import { motion } from "framer-motion";
 
-export const Section = styled.div`
-  min-height: 50vh;
+export const Section = styled(motion.div)`
+  min-height: 80vh;
   padding: 1rem 2rem;
+  @media only screen and (max-width: 320px) {
+    min-height: 50vh;
+  }
 `;
 
 export const StyledImage = styled.div`
