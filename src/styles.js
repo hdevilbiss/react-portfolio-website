@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Section = styled.div`
-  min-height: 90vh;
+  min-height: 50vh;
   padding: 1rem 2rem;
 `;
 

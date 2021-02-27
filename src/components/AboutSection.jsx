@@ -1,28 +1,41 @@
 import home1 from '../images/incense.jpg';
 import styled from 'styled-components';
 import { Section, StyledImage, Hide} from '../styles';
+import { motion } from 'framer-motion'
 
 const AboutSection = () => {
+  /**
+   * Framer Motion variant for .title div and h2
+   */
+  const titleAnim = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { duration: 1 } },
+  };
+  const containerAnim = {
+    hidden: { x: -200 },
+    show: { x: 0, transition: { duration: 1, ease: 'backInOut', staggerChildren: 1 } },
+  }
+
   return (
     <StyledAbout>
       <StyledDescription>
-        <div className="title">
+        <motion.div className="title" variants={containerAnim} initial="hidden" animate="show">
           <Hide>
-            <h2>
-              We bring
-            </h2>
+          <motion.h2 variants={titleAnim}>
+            We bring
+          </motion.h2>
           </Hide>
           <Hide>
-            <h2>
+          <motion.h2 variants={titleAnim}>
               the <span className="calm">calm</span>
-            </h2>
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2>
+            <motion.h2 variants={titleAnim}>
               to you
-            </h2>
+            </motion.h2>
           </Hide>
-        </div>
+        </motion.div>
         <p>
           Book a wellness event online today.
         </p>
