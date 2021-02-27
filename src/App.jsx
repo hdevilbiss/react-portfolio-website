@@ -7,6 +7,8 @@ import Home from './pages/Home';
 import Nav from "./components/Nav";
 import OurWork from "./pages/OurWork";
 import ContactUs from "./pages/ContactUs";
+import SingleWork from "./pages/SingleWork";
+
 /**
  * Styles
  */
@@ -21,8 +23,11 @@ function App() {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/work">
+        <Route path="/work" exact>
           <OurWork />
+        </Route>
+        <Route path="/work/:id">
+          <SingleWork />
         </Route>
         <Route path="/contact">
           <ContactUs />
