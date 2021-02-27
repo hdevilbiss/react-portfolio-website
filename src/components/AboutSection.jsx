@@ -4,34 +4,22 @@ import { Section, StyledImage, Hide} from '../styles';
 import { motion } from 'framer-motion'
 
 const AboutSection = () => {
-  /**
-   * Framer Motion variant for .title div and h2
-   */
-  const titleAnim = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 1 } },
-  };
-  const containerAnim = {
-    hidden: { x: -200 },
-    show: { x: 0, transition: { duration: 1, ease: 'backInOut', staggerChildren: 1 } },
-  }
-
   return (
     <StyledAbout>
       <StyledDescription>
-        <motion.div className="title" variants={containerAnim} initial="hidden" animate="show">
+        <motion.div className="title">
           <Hide>
-          <motion.h2 variants={titleAnim}>
+          <motion.h2>
             We bring
           </motion.h2>
           </Hide>
           <Hide>
-          <motion.h2 variants={titleAnim}>
+          <motion.h2>
               the <span className="calm">calm</span>
             </motion.h2>
           </Hide>
           <Hide>
-            <motion.h2 variants={titleAnim}>
+            <motion.h2>
               to you
             </motion.h2>
           </Hide>
