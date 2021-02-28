@@ -42,7 +42,7 @@ const StyledNav = styled.nav`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: auto;
+  margin-bottom: 0.5rem;
   min-height: 10vh;
   padding-top: 1rem;
   a {
