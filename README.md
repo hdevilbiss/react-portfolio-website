@@ -77,6 +77,8 @@ Install and import `motion` from the [framer-motion package](https://www.framer.
 
 `import { motion } from "framer-motion";`
 
+### Motion
+
 Use `motion` to create animated HTML elements. For example, make an animation `<h2>` heading.
 
 ```jsx
@@ -101,3 +103,9 @@ The `ease` property can be used to specify the [ease type](https://www.framer.co
 The `staggerChildren` property receives a duration to know how much to stagger each child animation.
 
 The `before` property can indicate whether the parent animation should run before or after the children animations.
+
+### Exit Animation
+
+Use `AnimatePresence` to animate components when they get removed from the React tree (`exit`).
+
+The `exitBeforeEnter` property indicates that the incoming animation should wait until the `exit` animation is done before starting.
