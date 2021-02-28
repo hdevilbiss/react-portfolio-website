@@ -12,6 +12,7 @@ const WorkCard = ({title, image, imageAlt, imageCredit, imageCreditLink}) => {
           Photo by <a href={imageCreditLink}>{imageCredit}</a> on Unsplash
         </span>
       </section>
+      <div className="line"></div>
     </div>
   );
 }

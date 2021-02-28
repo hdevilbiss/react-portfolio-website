@@ -19,7 +19,13 @@ const OurWork = () => {
   const [works, setWorks] = useState(getWorks());
 
   return (
-    <Work variants={pageAnimation} initial="hidden" animate="show" exit="exit">
+    <Work
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      style={{ background: "#FFF" }}
+      >
       <h2>
         Our Work
       </h2>
@@ -27,25 +33,30 @@ const OurWork = () => {
       from incense and music, to towels and yoga mats, or hot stones and candles
       </blockquote>
       <div className="line"></div>
-      {works.map(work => (
-        <>
+      {works.map(({title, id, image, imageAlt, imageCreditLink, imageCredit}) => (
           <WorkCard
-            title={work.title}
-            image={work.image}
-            imageAlt={work.imageAlt}
-            imageCreditLink={work.imageCreditLink}
-            imageCredit={work.imageCredit}
+            key={id}
+            title={title}
+            image={image}
+            imageAlt={imageAlt}
+            imageCreditLink={imageCreditLink}
+            imageCredit={imageCredit}
           />
-          <div className="line"></div>
-        </>
       ))}
     </Work>
   );
 }
 
 const Work = styled(Section)`
+  color: #111;
   min-height: 100vh;
   overflow: hidden;
+  a {
+    color: #52489C;
+    &:hover {
+      color: #111;
+    }
+  }
   blockquote {
     font-size: 1.5rem;
     font-style:italic;
