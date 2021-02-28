@@ -1,7 +1,15 @@
 import { useState, useEffect } from "react";
-import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import getWorks from "../works";
+/**
+ * Styles
+ */
+import styled from "styled-components";
+import { Section } from "../styles";
+/**
+ * Animations
+ */
+import { pageAnimation } from "../animation";
 
 const SingleWork = () => {
   const history = useHistory();
@@ -20,13 +28,15 @@ const SingleWork = () => {
   }, [works, work, currentURL]);
 
   return (
-    <div>
+    <StyledSingle variants={pageAnimation}initial="hidden" animate="show" exit="exit">
       <h2>
         {work.title}
       </h2>
       <img src={work.image} alt={work.imageAlt} />
-    </div>
+    </StyledSingle>
   );
 }
+
+const StyledSingle = styled(Section)``;
 
 export default SingleWork;
