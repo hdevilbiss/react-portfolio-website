@@ -22,13 +22,11 @@ const ServicesSection = () => {
         <Cards>
           <ServiceCard
             icon={faCar}
-            iconcolor="#F00"
             heading="Mobile"
             message="We will commute to your location."
           />
           <ServiceCard
             icon={faCertificate}
-            iconcolor="#FF0"
             heading="Certified"
             message="Well-educated coaches certified in meditation, yoga and wellness."
           />
@@ -39,7 +37,7 @@ const ServicesSection = () => {
           />
           <ServiceCard
             icon={faSmileBeam}
-            heading="Five-Star Service"
+            heading="5-Star Service"
             message="Our testimonials frequently mention the warm, friendly attitudes of our coaches."
           />
         </Cards>
