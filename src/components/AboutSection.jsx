@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Section, StyledImage, Hide} from '../styles';
 import { motion } from 'framer-motion';
 import { titleAnimation, fade, photoAnimation } from "../animation";
+import Wave from "./partials/Wave";
 
 const AboutSection = () => {
   return (
@@ -40,6 +41,7 @@ const AboutSection = () => {
           </figcaption>
         </motion.figure>
       </StyledImage>
+      <Wave />
     </StyledAbout>
   )
 }
