@@ -71,13 +71,12 @@ const Services = styled(Section)`
 `;
 
 const Cards = styled.div`
-  align-items: center;
+  align-items: top;
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
   gap: 1rem;
   justify-content: space-between;
-
 `;
 
 export default ServicesSection;
