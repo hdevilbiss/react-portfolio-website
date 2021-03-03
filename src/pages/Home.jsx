@@ -15,11 +15,12 @@ const Home = () => {
   const shouldReduceMotion = useReducedMotion();
   return (
     // <motion.div variants={shouldReduceMotion ? accessiblePageAnimation : pageAnimation} initial="hidden" animate="show" exit="exit">
-        <AnimatedPage>
+        <>
+          <AnimatedPage />
           <AboutSection />
           <ServicesSection />
           <FaqSection />
-        </AnimatedPage>
+        </>
     // </motion.div>
   )
 }
