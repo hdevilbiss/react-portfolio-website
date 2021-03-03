@@ -7,17 +7,18 @@ import FaqSection from '../components/FaqSection';
 /**
  * Animations
  */
-import { motion } from "framer-motion";
-import { pageAnimation } from "../animation";
+import { motion, useReducedMotion } from "framer-motion";
+import { pageAnimation, accessiblePageAnimation } from "../animation";
 
-const AboutUs = () => {
+const Home = () => {
+  const shouldReduceMotion = useReducedMotion();
   return (
-    <motion.div variants={pageAnimation} initial="hidden" animate="show" exit="exit">
-      <AboutSection />
-      <ServicesSection />
-      <FaqSection />
+    <motion.div variants={shouldReduceMotion ? accessiblePageAnimation : pageAnimation} initial="hidden" animate="show" exit="exit">
+        <AboutSection />
+        <ServicesSection />
+        <FaqSection />
     </motion.div>
   )
 }
 
-export default AboutUs;
+export default Home;

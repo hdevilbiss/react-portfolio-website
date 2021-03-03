@@ -9,13 +9,20 @@ import { Section } from "../styles";
 /**
  * Animations
  */
-import { pageAnimation } from "../animation";
+import { useReducedMotion } from "framer-motion";
+import { pageAnimation, accessiblePageAnimation } from "../animation";
 
 const SingleWork = () => {
+  /** Routing */
   const history = useHistory();
   const currentURL = history.location.pathname;
+
+  /** State */
   const [works, setWorks] = useState(getWorks());
   const [work, setWork] = useState({});
+
+  /** Animation */
+  const shouldReduceMotion = useReducedMotion();
 
   /**
    * UseEffect which runs when component mounts;
@@ -28,7 +35,7 @@ const SingleWork = () => {
   }, [works, work, currentURL]);
 
   return (
-    <StyledSingle variants={pageAnimation}initial="hidden" animate="show" exit="exit">
+    <StyledSingle variants={shouldReduceMotion ? accessiblePageAnimation : pageAnimation} initial="hidden" animate="show" exit="exit">
       <h2>
         {work.title}
       </h2>

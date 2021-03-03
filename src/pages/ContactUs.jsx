@@ -7,11 +7,15 @@ import personImg from "../images/person-with-eyes-closed.jpg";
 /**
  * Animations
  */
-import { pageAnimation } from "../animation";
+import { useReducedMotion } from "framer-motion";
+import { pageAnimation, accessiblePageAnimation } from "../animation";
 
 const ContactUs = () => {
+  /** Animation */
+  const shouldReduceMotion = useReducedMotion();
+
   return (
-    <Contact variants={pageAnimation}initial="hidden" animate="show" exit="exit">
+    <Contact variants={shouldReduceMotion ? accessiblePageAnimation : pageAnimation} initial="hidden" animate="show" exit="exit">
       <h2>
         Contact Us
       </h2>
