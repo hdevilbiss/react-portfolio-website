@@ -1,11 +1,12 @@
-import {useState} from "react";
+import { useState } from "react";
 import styled from "styled-components";
-import {Section} from "../styles";
+import { Section } from "../styles";
 import WorkCard from "../components/partials/WorkCard";
 /**
  * Animations
  */
-import { pageAnimation } from "../animation";
+import { motion, useReducedMotion } from "framer-motion";
+import { pageAnimation, accessiblePageAnimation, fade, photoAnimation, rainbowSlider, rainbowContainer } from "../animation";
 
 /**
  * Data for OurWork page
@@ -13,34 +14,44 @@ import { pageAnimation } from "../animation";
 import getWorks from '../works';
 
 const OurWork = () => {
-  /**
-   * State
-   */
+  /** State */
   const [works, setWorks] = useState(getWorks());
+
+  /** Animation */
+  const shouldReduceMotion = useReducedMotion();
 
   return (
     <Work
-      variants={pageAnimation}
+      variants={shouldReduceMotion ? accessiblePageAnimation : pageAnimation}
       initial="hidden"
       animate="show"
       exit="exit"
       style={{ background: "#FFF" }}
-      >
-      <h2>
+    >
+      <motion.div variants={rainbowContainer}>
+        <Frame1 variants={rainbowSlider}></Frame1>
+        <Frame2 variants={rainbowSlider}></Frame2>
+        <Frame3 variants={rainbowSlider}></Frame3>
+        <Frame4 variants={rainbowSlider}></Frame4>
+      </motion.div>
+      <motion.h2 variants={fade}>
         Our Work
-      </h2>
+      </motion.h2>
       <blockquote>
       from incense and music, to towels and yoga mats, or hot stones and candles
       </blockquote>
-      <div className="line"></div>
-      {works.map(({title, id, image, imageAlt, imageCreditLink, imageCredit}) => (
+      <motion.div className="line"></motion.div>
+      {works.map(({title, id, url, image, imageAlt, imageCreditLink, imageCredit}) => (
           <WorkCard
             key={id}
             title={title}
+            url={url}
             image={image}
             imageAlt={imageAlt}
             imageCreditLink={imageCreditLink}
             imageCredit={imageCredit}
+            photoAnimation={photoAnimation}
+            fade={fade}
           />
       ))}
     </Work>
@@ -76,6 +87,32 @@ const Work = styled(Section)`
       font-size: 1.1rem;
     }
   }
+`;
+
+/** Frame Animation */
+const Frame1 = styled(motion.div)`
+  position: fixed;
+  left: 0;
+  top: 15%;
+  width: 100%;
+  height: 100vh;
+  background: #fffebf;
+  z-index: 2;
+  @media (prefers-reduced-motion) {
+    display: none;
+  }
+`;
+
+const Frame2 = styled(Frame1)`
+  background-color: #ff8efb;
+`;
+
+const Frame3 = styled(Frame1)`
+  background-color: #8ed2ff;
+`;
+
+const Frame4 = styled(Frame1)`
+  background-color: #8effa0;
 `;
 
 export default OurWork;
