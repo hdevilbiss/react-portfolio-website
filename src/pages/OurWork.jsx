@@ -6,7 +6,7 @@ import WorkCard from "../components/partials/WorkCard";
  * Animations
  */
 import { motion, useReducedMotion } from "framer-motion";
-import { pageAnimation, accessiblePageAnimation, fade, photoAnimation, rainbowSlider, rainbowContainer } from "../animation";
+import { pageAnimation, accessiblePageAnimation, fade, photoAnimation, rainbowSlider, rainbowContainer, lineAnimation } from "../animation";
 
 /**
  * Data for OurWork page
@@ -37,10 +37,10 @@ const OurWork = () => {
       <motion.h2 variants={fade}>
         Our Work
       </motion.h2>
-      <blockquote>
+      <motion.blockquote variants={fade}>
       from incense and music, to towels and yoga mats, or hot stones and candles
-      </blockquote>
-      <motion.div className="line"></motion.div>
+      </motion.blockquote>
+      <motion.div className="line" variants={lineAnimation}></motion.div>
       {works.map(({title, id, url, image, imageAlt, imageCreditLink, imageCredit}) => (
           <WorkCard
             key={id}
