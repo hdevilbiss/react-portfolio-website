@@ -96,7 +96,7 @@ const Frame1 = styled(motion.div)`
   top: 15%;
   width: 100%;
   height: 100vh;
-  background: #fffebf;
+  background: #000;
   z-index: 2;
   @media (prefers-reduced-motion) {
     display: none;
@@ -104,15 +104,15 @@ const Frame1 = styled(motion.div)`
 `;
 
 const Frame2 = styled(Frame1)`
-  background-color: #ff8efb;
+  background-color: #52489C;
 `;
 
 const Frame3 = styled(Frame1)`
-  background-color: #8ed2ff;
+  background-color: rgba(0,180,216, 0.75);
 `;
 
 const Frame4 = styled(Frame1)`
-  background-color: #8effa0;
+  background-color: rgba(0,180,216, 0.5);
 `;
 
 export default OurWork;
