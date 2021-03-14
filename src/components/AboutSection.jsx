@@ -1,42 +1,48 @@
 import home1 from '../images/incense.jpg';
 import styled from 'styled-components';
+import { Section, StyledImage, Hide} from '../styles';
+import { motion, useReducedMotion } from 'framer-motion';
+import { titleAnimation, fade, photoAnimation } from "../animation";
+import Wave from "./partials/Wave";
 
 const AboutSection = () => {
+  const shouldReduceMotion = useReducedMotion();
   return (
     <StyledAbout>
       <StyledDescription>
-        <div className="title">
+        <motion.div className="title">
           <Hide>
-            <h2>
+            <motion.h2 variants={shouldReduceMotion ? fade : titleAnimation}>
               We bring
-            </h2>
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2>
+            <motion.h2 variants={shouldReduceMotion ? fade : titleAnimation}>
               the <span className="calm">calm</span>
-            </h2>
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2>
+            <motion.h2 variants={shouldReduceMotion ? fade : titleAnimation}>
               to you
-            </h2>
+            </motion.h2>
           </Hide>
-        </div>
-        <p>
-          Book a meditation event online today.
-        </p>
-        <button>
+        </motion.div>
+        <motion.p variants={fade}>
+          Book a wellness event online today.
+        </motion.p>
+        <motion.button variants={fade}>
           Book Now
-        </button>
+        </motion.button>
       </StyledDescription>
       <StyledImage>
-        <figure>
-          <img src={home1} alt="A person cooling some incense" />
+        <motion.figure variants={shouldReduceMotion ? fade : photoAnimation}>
+          <img src={home1} alt="A person cooling some incense with some brass worship bowls" />
           <figcaption>
             <span className="photo-credit">Photo by <a href="https://unsplash.com/@conscious_design?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Conscious Design</a> on <a href="https://unsplash.com/s/photos/meditation?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
           </figcaption>
-        </figure>
+        </motion.figure>
       </StyledImage>
+      <Wave />
     </StyledAbout>
   )
 }
@@ -44,19 +50,15 @@ const AboutSection = () => {
 /**
  * Styled Components
  */
-const StyledAbout = styled.div`
+const StyledAbout = styled(Section)`
   align-items: center;
-  background-color: #111;
-  color: #eee;
   display: flex;
   overflow: hidden;
   gap: 1rem;
   justify-content: space-between;
-  min-height: 90vh;
-  padding: 0rem 2rem;
-  .calm {
-    color: #00afb9;
-    font-weight: bold;
+  padding: 2rem 2rem;
+  h2 {
+    font-size: 3rem;
   }
   .title {
     letter-spacing: 0.25rem;
@@ -65,15 +67,12 @@ const StyledAbout = styled.div`
     text-align: center;
     width: fit-content;
   }
-  .photo-credit {
-    font-style: italic;
-    a {
-      color:#00afb9;
-      transition: all 0.5s ease;
-      &:hover {
-        color: #fff;
-      }
-    }
+  @media only screen and (max-width: 640px) {
+    background-image: url("../images/incense.jpg");
+    padding-top: 2rem;
+  }
+  @media only screen and (max-width: 320) {
+    align-items: flex-start;
   }
 `;
 
@@ -93,20 +92,16 @@ const StyledDescription = styled.div`
     padding-left: 2rem;
     padding-right: 2rem;
   }
-`;
-
-const StyledImage = styled.div`
-  flex: 1;
-  overflow: hidden;
-  img {
-    height: 80vh;
-    object-fit: cover;
-    width: 100%;
+  /**
+  * Mobile
+  */
+  @media only screen and (max-width: 640px) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0;
   }
 `;
 
-const Hide = styled.div`
-  overflow: hidden;
-`;
+
 
 export default AboutSection;
