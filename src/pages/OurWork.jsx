@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styled from "styled-components";
 import { Section } from "../styles";
 import WorkCard from "../components/partials/WorkCard";
