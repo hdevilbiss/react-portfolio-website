@@ -1,27 +1,28 @@
 import home1 from '../images/incense.jpg';
 import styled from 'styled-components';
 import { Section, StyledImage, Hide} from '../styles';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { titleAnimation, fade, photoAnimation } from "../animation";
 import Wave from "./partials/Wave";
 
 const AboutSection = () => {
+  const shouldReduceMotion = useReducedMotion();
   return (
     <StyledAbout>
       <StyledDescription>
         <motion.div className="title">
           <Hide>
-          <motion.h2 variants={titleAnimation}>
-            We bring
-          </motion.h2>
+            <motion.h2 variants={shouldReduceMotion ? fade : titleAnimation}>
+              We bring
+            </motion.h2>
           </Hide>
           <Hide>
-          <motion.h2 variants={titleAnimation}>
+            <motion.h2 variants={shouldReduceMotion ? fade : titleAnimation}>
               the <span className="calm">calm</span>
             </motion.h2>
           </Hide>
           <Hide>
-            <motion.h2 variants={titleAnimation}>
+            <motion.h2 variants={shouldReduceMotion ? fade : titleAnimation}>
               to you
             </motion.h2>
           </Hide>
@@ -34,7 +35,7 @@ const AboutSection = () => {
         </motion.button>
       </StyledDescription>
       <StyledImage>
-        <motion.figure variants={photoAnimation}>
+        <motion.figure variants={shouldReduceMotion ? fade : photoAnimation}>
           <img src={home1} alt="A person cooling some incense with some brass worship bowls" />
           <figcaption>
             <span className="photo-credit">Photo by <a href="https://unsplash.com/@conscious_design?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Conscious Design</a> on <a href="https://unsplash.com/s/photos/meditation?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
