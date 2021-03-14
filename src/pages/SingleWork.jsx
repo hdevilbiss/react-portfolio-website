@@ -18,7 +18,7 @@ const SingleWork = () => {
   const currentURL = history.location.pathname;
 
   /** State */
-  const [works, setWorks] = useState(getWorks());
+  const works = getWorks();
   const [work, setWork] = useState({});
 
   /** Animation */

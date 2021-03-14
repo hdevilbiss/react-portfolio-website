@@ -14,8 +14,8 @@ import { pageAnimation, accessiblePageAnimation, fade, photoAnimation, rainbowSl
 import getWorks from '../works';
 
 const OurWork = () => {
-  /** State */
-  const [works, setWorks] = useState(getWorks());
+  /** Data */
+  const works = getWorks();
 
   /** Animation */
   const shouldReduceMotion = useReducedMotion();
