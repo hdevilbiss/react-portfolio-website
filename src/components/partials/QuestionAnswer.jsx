@@ -1,5 +1,8 @@
 import { useState } from "react";
-import Toggle from "./Toggle";
+
+/** Animation */
+import { AnimatePresence, motion } from "framer-motion";
+import { fade } from "../../animation";
 
 const QuestionAnswer = ({question, answer}) => {
   /** State */
@@ -11,21 +14,24 @@ const QuestionAnswer = ({question, answer}) => {
   }
 
   return (
-    <div>
+    <motion.div layout>
       <div onClick={questionClickHandler} className="question">
-        <h5>
+        <motion.h5 layout>
           {question}
-        </h5>
+        </motion.h5>
       </div>
-      {faqToggle && (
-        <div className="answer">
-          <p>
-            {answer}
-          </p>
-        </div>
-      )}
+      <AnimatePresence>
+        {faqToggle && (
+          <motion.div layout className="answer"
+          variants={fade}>
+            <p>
+              {answer}
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="line"></div>
-    </div>
+    </motion.div>
   );
 }
 

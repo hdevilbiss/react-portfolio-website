@@ -1,4 +1,3 @@
-import { useState } from "react";
 /** Components */
 import QuestionAnswer from './partials/QuestionAnswer';
 
@@ -9,8 +8,11 @@ import { Section } from "../styles";
 /** Data */
 import getFAQ from "../faq";
 
+/** Animation */
+import { AnimateSharedLayout } from "framer-motion";
+
 const FaqSection = () => {
-  const dataForFAQ = getFAQ();
+  const questionAndAnswerData = getFAQ();
 
   return (
     <StyledFaq>
@@ -24,15 +26,17 @@ const FaqSection = () => {
         </h4>
       </header>
         <div className="qa">
-        {dataForFAQ.map(({id, question, answer}) => {
-          return (
-            <QuestionAnswer
-              key={id}
-              question={question}
-              answer={answer}
-            />
-          )
-        })}
+          <AnimateSharedLayout type="crossfade">
+            {questionAndAnswerData.map(({id, question, answer}) => {
+            return (
+              <QuestionAnswer
+                key={id}
+                question={question}
+                answer={answer}
+              />
+            )
+          })}
+          </AnimateSharedLayout>
         </div>
       </section>
     </StyledFaq>
